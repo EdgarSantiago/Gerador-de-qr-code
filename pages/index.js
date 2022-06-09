@@ -8,21 +8,17 @@ export default function Home() {
 
   const [state, setstate] = useState("");
 
-  const submitHandler = (e) => {
-    e.preventDefault()
-  }
-
   return (
     <div className='container py-5 text-center'>
-     
+
       <div className='row justify-content-center pb-5'>
         <div className='col'>
-        <QRCode value={state}/>,
+          <QRCode value={state} />,
         </div>
       </div>
-  
+
       <div className='row'>
-        <form onSubmit={submitHandler}>
+        <form>  
           <input type="text" onChange={(e) => setstate(e.target.value)} />
         </form>
       </div>
